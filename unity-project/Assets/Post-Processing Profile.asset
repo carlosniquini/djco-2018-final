@@ -71,7 +71,7 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 1
     m_Settings:
-      focusDistance: 1.6219362
+      focusDistance: 2.0459592
       aperture: 32
       focalLength: 155
       useCameraFov: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
         temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 0.2
+        saturation: 0.07
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
