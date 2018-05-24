@@ -2720,6 +2720,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lake: {fileID: 8300000, guid: f7e1532f8a2b4e242918abd0ddb6962f, type: 3}
   ambiente: {fileID: 8300000, guid: 638f9012b1c1afd4f923cd2f14299b5b, type: 3}
+  fstp_grass:
+  - {fileID: 8300000, guid: 6193bc36b5ca1814bbcdf152deb76600, type: 3}
+  - {fileID: 8300000, guid: 4bc7e3484dbce15429e6614d43d92598, type: 3}
+  - {fileID: 8300000, guid: 250bc9ec6f1c66d42a34ea01be4bf76a, type: 3}
+  - {fileID: 8300000, guid: a50dda034f97bf9419c4fc200176c5cb, type: 3}
+  - {fileID: 8300000, guid: 961a3a9da0ad85c489cc9a32082b541b, type: 3}
+  fstp_sand:
+  - {fileID: 8300000, guid: 6674649ec88d62d4eb7bfc7eba1af0c3, type: 3}
+  - {fileID: 8300000, guid: 14925c59959fdc24e93c9885644ae0fb, type: 3}
+  - {fileID: 8300000, guid: 972a2e52e3fb8744c870668c8189ce90, type: 3}
+  - {fileID: 8300000, guid: bef8eaee9c01a6b4a9e215929c10b895, type: 3}
+  - {fileID: 8300000, guid: 17845a94cff3e5346a8e577ddda54ff8, type: 3}
+  - {fileID: 8300000, guid: 63e8b04676930e04ebf7ccd9e5a3530a, type: 3}
+  fstp_dry_leaves:
+  - {fileID: 8300000, guid: 5cfff52bee3eb2d4794d90796aa4c864, type: 3}
+  - {fileID: 8300000, guid: 200960077478fb7438924fc8434f69e2, type: 3}
+  - {fileID: 8300000, guid: 135d1e2b123d2d84abee9bc2b9968712, type: 3}
+  - {fileID: 8300000, guid: 608c544b3417ba9468ea95f201879272, type: 3}
+  - {fileID: 8300000, guid: 7d261735f9e26a648b859f7b203eac7f, type: 3}
+  fstp_concrete:
+  - {fileID: 8300000, guid: 6ab6d5a797dfe6e408042799a57c8ea7, type: 3}
+  - {fileID: 8300000, guid: 588285d9be63cec4db918b20b9f0539c, type: 3}
+  - {fileID: 8300000, guid: a23731bb2a172cd4d9a811e4bfd0315c, type: 3}
 --- !u!1 &1131604666
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,6 +3223,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1303846800}
+  - component: {fileID: 1303846801}
   - component: {fileID: 1303846799}
   - component: {fileID: 1303846798}
   m_Layer: 0
@@ -3266,6 +3290,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303846801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1303846797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16c71ae2802e03409cd7f0dc661141d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1311082340
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,10 +4053,10 @@ RectTransform:
   m_Father: {fileID: 162921950}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -2, y: -603.5}
-  m_SizeDelta: {x: 848, y: -4}
+  m_SizeDelta: {x: -4, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1691030493
 Animator:
