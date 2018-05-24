@@ -9,7 +9,12 @@ public class Player : MonoBehaviour {
   private Animator options;
   private GameObject carrying;
   private PostProcessingProfile ppp;
+  private AudioSource audioSourceSteps;
+  private AudioSource audioSourceAmbiente;
+  private bool underlake = false;
   private TaskDefault task_1;
+  public AudioClip lake;
+  public AudioClip ambiente;
 
   private void Awake() {
     //Options.SetOptios(GameObject.Find("Options").GetComponent<Animator>());
@@ -20,6 +25,8 @@ public class Player : MonoBehaviour {
     inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
     options = GameObject.Find("Options").GetComponent<Animator>();
     ppp = this.GetComponentInChildren<PostProcessingBehaviour>().profile;
+    audioSourceSteps = this.GetComponent<AudioSource>();
+    audioSourceAmbiente = this.GetComponentsInChildren<AudioSource>()[1];
     task_1 = GameObject.Find("Task1").GetComponent<TaskDefault>();
     //var aux = ppp.depthOfField.settings;
     //aux.focusDistance = 5f;
@@ -47,5 +54,25 @@ public class Player : MonoBehaviour {
   public GameObject Carrying {
     get { return carrying; }
     set { this.carrying = value; }
+  }
+
+  public bool UnderLake {
+    get { return underlake; }
+    set { this.underlake = value; }
+  }
+
+  private void OnTriggerExit(Collider other) {
+    if (other.gameObject.tag == "lake" && gameObject.transform.position.y < other.gameObject.transform.position.y) {
+      audioSourceAmbiente.clip = lake;
+      audioSourceSteps.mute = true;
+      audioSourceAmbiente.Play();
+      UnderLake = true;
+    }
+    if (other.gameObject.tag == "lake" && gameObject.transform.position.y > other.gameObject.transform.position.y) {
+      audioSourceAmbiente.clip = ambiente;
+      audioSourceSteps.mute = false;
+      audioSourceAmbiente.Play();
+      UnderLake = false;
+    }
   }
 }
