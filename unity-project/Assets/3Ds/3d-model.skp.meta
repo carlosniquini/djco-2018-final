@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 1b205c3d8cd517b40b40b472e67281c5
+timeCreated: 1527447693
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f00000070000000710000007200000073000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 1eb8c8842b4303fb5872e1c551045438
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 14.296029, y: 7.4559727, z: 9.57106}
+      lookAt: {x: 137.1797, y: 119.03233, z: 25155.21}
+      up: {x: -0.00002168335, y: 0.99999017, z: -0.0044370554}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Component#1
+    100004: Component#1 1
+    100006: Component#1 2
+    100008: Component#1 3
+    100010: Component#1 4
+    100012: Component#1 5
+    100014: Component#1 6
+    100016: Component#1 7
+    100018: Component#1 8
+    100020: Component#1 9
+    100022: Component#2
+    100024: Component#2 1
+    100026: Component#4
+    100028: Component#4 1
+    100030: Component#4 2
+    100032: Component#4 3
+    100034: Component#4 4
+    100036: Component#4 5
+    100038: Component#4 6
+    100040: Component#5
+    100042: Component#5 1
+    100044: Component#5 2
+    100046: Component#5 3
+    100048: Component#5 4
+    100050: Component#5 5
+    100052: Component#6
+    100054: Component#6 1
+    100056: Component#6 2
+    100058: Component#6 3
+    100060: Component#6 4
+    100062: Component#7
+    100064: Component#8
+    100066: Component#8 1
+    100068: Doorknob_Round
+    100070: Doorknob_Round 1
+    100072: Doorknob_Round 10
+    100074: Doorknob_Round 11
+    100076: Doorknob_Round 12
+    100078: Doorknob_Round 13
+    100080: Doorknob_Round 14
+    100082: Doorknob_Round 15
+    100084: Doorknob_Round 16
+    100086: Doorknob_Round 17
+    100088: Doorknob_Round 18
+    100090: Doorknob_Round 19
+    100092: Doorknob_Round 2
+    100094: Doorknob_Round 3
+    100096: Doorknob_Round 4
+    100098: Doorknob_Round 5
+    100100: Doorknob_Round 6
+    100102: Doorknob_Round 7
+    100104: Doorknob_Round 8
+    100106: Doorknob_Round 9
+    100108: Laundry_Dryer
+    100110: Laundry_Washer
+    100112: Toilet2
+    100114: Toilet2 1
+    400000: //RootNode
+    400002: Component#1
+    400004: Component#1 1
+    400006: Component#1 2
+    400008: Component#1 3
+    400010: Component#1 4
+    400012: Component#1 5
+    400014: Component#1 6
+    400016: Component#1 7
+    400018: Component#1 8
+    400020: Component#1 9
+    400022: Component#2
+    400024: Component#2 1
+    400026: Component#4
+    400028: Component#4 1
+    400030: Component#4 2
+    400032: Component#4 3
+    400034: Component#4 4
+    400036: Component#4 5
+    400038: Component#4 6
+    400040: Component#5
+    400042: Component#5 1
+    400044: Component#5 2
+    400046: Component#5 3
+    400048: Component#5 4
+    400050: Component#5 5
+    400052: Component#6
+    400054: Component#6 1
+    400056: Component#6 2
+    400058: Component#6 3
+    400060: Component#6 4
+    400062: Component#7
+    400064: Component#8
+    400066: Component#8 1
+    400068: Doorknob_Round
+    400070: Doorknob_Round 1
+    400072: Doorknob_Round 10
+    400074: Doorknob_Round 11
+    400076: Doorknob_Round 12
+    400078: Doorknob_Round 13
+    400080: Doorknob_Round 14
+    400082: Doorknob_Round 15
+    400084: Doorknob_Round 16
+    400086: Doorknob_Round 17
+    400088: Doorknob_Round 18
+    400090: Doorknob_Round 19
+    400092: Doorknob_Round 2
+    400094: Doorknob_Round 3
+    400096: Doorknob_Round 4
+    400098: Doorknob_Round 5
+    400100: Doorknob_Round 6
+    400102: Doorknob_Round 7
+    400104: Doorknob_Round 8
+    400106: Doorknob_Round 9
+    400108: Laundry_Dryer
+    400110: Laundry_Washer
+    400112: Toilet2
+    400114: Toilet2 1
+    2100000: _defaultMat
+    2100002: '[Color_C18]'
+    2100004: '[Wood_Cherry_Original]'
+    2100006: Vegetation_Bark_Cedar
+    2100008: _3
+    2100010: Wood_Deck
+    2100012: '[Color_007]'
+    2100014: _9
+    2100016: '[Metal_Aluminum_Anodized]'
+    2100018: 96,96,96
+    2100020: Stone_Granite_Coffee
+    2100022: '[Color_001]'
+    2100024: '[Stone_Masonry_Multi]'
+    2100026: '[Wood_Board_Cork]'
+    2100028: '[Water_Pool]'
+    2100030: _LightGray_
+    2100032: '[Color_004]'
+    2100034: '[Color_009]'
+    2100036: '[0009_Linen]'
+    2100038: '[Fencing_Diamond_Mesh]'
+    2100040: '[Translucent_Glass_Sky_Reflection]'
+    2100042: '[Color_A13]'
+    2100044: _Gray Glass_1
+    2100046: '[Color_003]'
+    2100048: '[Cladding_Stucco_White]'
+    2100050: Tile_Ceramic_Earthy
+    2100052: Cladding_Wood_Weathered
+    2100054: _1
+    2100056: _2
+    2100058: '[Carpet_Berber_Pattern_Gray]'
+    2100060: '[Wood_Floor_Light]'
+    2100062: '[Stone_Coursed_Rough]'
+    2100064: '[Tile_Mosaic_Multi]'
+    2100066: '[Wood_Lumber_ButtJoined]'
+    2100068: '[Metal_Rusted]'
+    2100070: '[Translucent_Glass_Sky_Reflection]1'
+    2100072: _30
+    2100074: Metal_Corrogated_Brown
+    2100076: _Ivory_
+    2100078: Metal_Brushed
+    2300000: //RootNode
+    2300002: Component#1
+    2300004: Component#1 1
+    2300006: Component#1 2
+    2300008: Component#1 3
+    2300010: Component#1 4
+    2300012: Component#1 5
+    2300014: Component#1 6
+    2300016: Component#1 7
+    2300018: Component#1 8
+    2300020: Component#1 9
+    2300022: Component#2
+    2300024: Component#2 1
+    2300026: Component#4
+    2300028: Component#4 1
+    2300030: Component#4 2
+    2300032: Component#4 3
+    2300034: Component#4 4
+    2300036: Component#4 5
+    2300038: Component#4 6
+    2300040: Component#5
+    2300042: Component#5 1
+    2300044: Component#5 2
+    2300046: Component#5 3
+    2300048: Component#5 4
+    2300050: Component#5 5
+    2300052: Component#6
+    2300054: Component#6 1
+    2300056: Component#6 2
+    2300058: Component#6 3
+    2300060: Component#6 4
+    2300062: Component#7
+    2300064: Component#8
+    2300066: Component#8 1
+    2300068: Doorknob_Round
+    2300070: Doorknob_Round 1
+    2300072: Doorknob_Round 10
+    2300074: Doorknob_Round 11
+    2300076: Doorknob_Round 12
+    2300078: Doorknob_Round 13
+    2300080: Doorknob_Round 14
+    2300082: Doorknob_Round 15
+    2300084: Doorknob_Round 16
+    2300086: Doorknob_Round 17
+    2300088: Doorknob_Round 18
+    2300090: Doorknob_Round 19
+    2300092: Doorknob_Round 2
+    2300094: Doorknob_Round 3
+    2300096: Doorknob_Round 4
+    2300098: Doorknob_Round 5
+    2300100: Doorknob_Round 6
+    2300102: Doorknob_Round 7
+    2300104: Doorknob_Round 8
+    2300106: Doorknob_Round 9
+    2300108: Laundry_Dryer
+    2300110: Laundry_Washer
+    2300112: Toilet2
+    2300114: Toilet2 1
+    3300000: //RootNode
+    3300002: Component#1
+    3300004: Component#1 1
+    3300006: Component#1 2
+    3300008: Component#1 3
+    3300010: Component#1 4
+    3300012: Component#1 5
+    3300014: Component#1 6
+    3300016: Component#1 7
+    3300018: Component#1 8
+    3300020: Component#1 9
+    3300022: Component#2
+    3300024: Component#2 1
+    3300026: Component#4
+    3300028: Component#4 1
+    3300030: Component#4 2
+    3300032: Component#4 3
+    3300034: Component#4 4
+    3300036: Component#4 5
+    3300038: Component#4 6
+    3300040: Component#5
+    3300042: Component#5 1
+    3300044: Component#5 2
+    3300046: Component#5 3
+    3300048: Component#5 4
+    3300050: Component#5 5
+    3300052: Component#6
+    3300054: Component#6 1
+    3300056: Component#6 2
+    3300058: Component#6 3
+    3300060: Component#6 4
+    3300062: Component#7
+    3300064: Component#8
+    3300066: Component#8 1
+    3300068: Doorknob_Round
+    3300070: Doorknob_Round 1
+    3300072: Doorknob_Round 10
+    3300074: Doorknob_Round 11
+    3300076: Doorknob_Round 12
+    3300078: Doorknob_Round 13
+    3300080: Doorknob_Round 14
+    3300082: Doorknob_Round 15
+    3300084: Doorknob_Round 16
+    3300086: Doorknob_Round 17
+    3300088: Doorknob_Round 18
+    3300090: Doorknob_Round 19
+    3300092: Doorknob_Round 2
+    3300094: Doorknob_Round 3
+    3300096: Doorknob_Round 4
+    3300098: Doorknob_Round 5
+    3300100: Doorknob_Round 6
+    3300102: Doorknob_Round 7
+    3300104: Doorknob_Round 8
+    3300106: Doorknob_Round 9
+    3300108: Laundry_Dryer
+    3300110: Laundry_Washer
+    3300112: Toilet2
+    3300114: Toilet2 1
+    4300000: Mesh 3d-model
+    4300002: Mesh Component#5
+    4300004: Mesh Component#1
+    4300006: Mesh Doorknob_Round
+    4300008: Mesh Laundry_Dryer
+    4300010: Mesh Toilet2
+    4300012: Mesh Component#2
+    4300014: Mesh Laundry_Washer
+    4300016: Mesh Component#4
+    4300018: Mesh Component#6
+    4300020: Mesh Component#8
+    4300022: Mesh Component#7
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
