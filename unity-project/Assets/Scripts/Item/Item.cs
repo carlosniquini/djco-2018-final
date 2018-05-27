@@ -4,4 +4,10 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour {
 
+  public int _id;
+  public string _name;
+  public Sprite image;
+  public AudioClip sound;
+  public bool inventoryItem;
+  public bool isPickable;
 }

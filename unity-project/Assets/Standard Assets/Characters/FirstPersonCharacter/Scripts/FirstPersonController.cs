@@ -43,6 +43,10 @@ public class FirstPersonController : MonoBehaviour {
   private bool m_Jumping;
   private AudioSource m_AudioSource;
 
+  public AudioClip[] FootstepsSounds {
+    set { this.m_FootstepSounds = value; }
+  }
+
   // Use this for initialization
   private void Start () {
     m_CharacterController = GetComponent<CharacterController> ();
@@ -116,7 +120,6 @@ public class FirstPersonController : MonoBehaviour {
       m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
     }
     m_CollisionFlags = m_CharacterController.Move (m_MoveDir * Time.fixedDeltaTime);
-
     ProgressStepCycle (speed);
     UpdateCameraPosition (speed);
 
