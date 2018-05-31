@@ -5,15 +5,6 @@ using UnityEngine.UI;
 
 public class ItemDefault : Item {
 
-  /*
-  public int _id;
-  public int _name;
-  public Sprite image;
-  public AudioClip sound;
-  public bool inventoryItem;
-  public bool isPickable;
-  */
-
   private Player player;
   private Transform playerCam;
   private Options options;
@@ -32,7 +23,7 @@ public class ItemDefault : Item {
     if (player.Carrying != null && player.Carrying != this.gameObject) return;
     IsNear();
     if (inventoryItem && hasPlayer) {
-      if (Input.GetMouseButtonDown(1)) {
+      if (Input.GetMouseButton(1)) {
         player.AddItem(this);
         player.GetComponent<AudioSource>().clip = sound;
         player.GetComponent<AudioSource>().Play();
@@ -59,7 +50,6 @@ public class ItemDefault : Item {
         }
       }
     }
-
   }
 
   private void IsNear() {
@@ -77,6 +67,44 @@ public class ItemDefault : Item {
       //}
     }
     //player.ShowOptions(false);
+  }
+
+  public Player Player {
+    get {
+      return this.player;
+    }
+    set {
+      this.player = value;
+    }
+  }
+
+  public Transform PlayerCam {
+    get {
+      return this.playerCam;
+    }
+    set {
+      this.playerCam = value;
+    }
+  }
+
+  public bool HasPlayer {
+    set {
+      this.hasPlayer = value;
+    }
+    get {
+      return this.hasPlayer;
+    }
+  }
+
+  public bool BeingCarried {
+    set
+    {
+      this.beingCarried = value;
+    }
+    get
+    {
+      return this.beingCarried;
+    }
   }
 
   /*

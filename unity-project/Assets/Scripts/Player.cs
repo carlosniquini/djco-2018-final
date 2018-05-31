@@ -45,7 +45,7 @@ public class Player : MonoBehaviour {
     task_1 = GameObject.Find("Task1").GetComponent<TaskDefault>();
     terrainController = GameObject.Find("Terrain").GetComponent<TerrainController>();
     ChangeFoostepsSound(0);
-    StartCoroutine(Wake());
+    //StartCoroutine(Wake());
     //TerrainController.changeEvent += ChangeFoostepsSound;
     //var aux = ppp.depthOfField.settings;
     //aux.focusDistance = 5f;

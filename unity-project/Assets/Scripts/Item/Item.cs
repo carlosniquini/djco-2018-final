@@ -10,4 +10,5 @@ public abstract class Item : MonoBehaviour {
   public AudioClip sound;
   public bool inventoryItem;
   public bool isPickable;
+  public bool useRaycast;
 }
