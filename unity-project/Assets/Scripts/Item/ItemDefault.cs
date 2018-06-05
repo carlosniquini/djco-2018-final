@@ -54,7 +54,8 @@ public class ItemDefault : Item {
 
   private void IsNear() {
     float dist = Vector3.Distance(gameObject.transform.position, player.GetComponent<Transform>().position);
-    if (dist <= 2.5f) {
+    //Debug.Log(this.name);
+    if (dist <= 2.5f && player.LookAt != null && player.LookAt.name == this.name) {
       hasPlayer = true;
       options.SetTarget(this.GetComponent<Transform>());
       options.ShowOptions();

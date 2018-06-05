@@ -7,6 +7,8 @@ public class AppPhotos : MonoBehaviour {
 
   private bool isDisplayed = false;
   private bool isDisplayedViewer = false;
+  private bool isFirst = true;
+  private Smartphone smartphone;
   private ArrayList photos = new ArrayList();
   private GameObject panel;
   private GameObject photoViewer;
@@ -17,6 +19,7 @@ public class AppPhotos : MonoBehaviour {
   void Start () {
     panel = GameObject.Find("PanelPhotos");
     photoViewer = GameObject.Find("PhotoViewer");
+    smartphone = this.GetComponentInParent<Smartphone>();
     AddPhoto(photo_house);
   }
 
@@ -26,6 +29,10 @@ public class AppPhotos : MonoBehaviour {
   }
 
   public void Show() {
+    if (isFirst) {
+      smartphone.PlayStinger();
+      isFirst = false;
+    }
     this.GetComponent<Animator>().SetBool("isDisplayed", isDisplayed = !isDisplayed);
     desktop.SetActive(!isDisplayed);
   }

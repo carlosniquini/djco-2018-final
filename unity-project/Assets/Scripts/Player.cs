@@ -20,9 +20,10 @@ public class Player : MonoBehaviour {
   private TerrainController terrainController;
   private int current_idx;
   private Image panelIntro;
+  private GameObject lookAt;
+
   public AudioClip ambiente_underlake;
   public AudioClip ambiente;
-
   public AudioClip[] fstp_grass;
   public AudioClip[] fstp_sand;
   public AudioClip[] fstp_dry_leaves;
@@ -45,7 +46,7 @@ public class Player : MonoBehaviour {
     task_1 = GameObject.Find("Task1").GetComponent<TaskDefault>();
     terrainController = GameObject.Find("Terrain").GetComponent<TerrainController>();
     ChangeFoostepsSound(0);
-    //StartCoroutine(Wake());
+    StartCoroutine(Wake());
     //TerrainController.changeEvent += ChangeFoostepsSound;
     //var aux = ppp.depthOfField.settings;
     //aux.focusDistance = 5f;
@@ -97,15 +98,40 @@ public class Player : MonoBehaviour {
 
   // Update is called once per frame
   void Update () {
-
+    RayCast();
     //terrainController.GetMainTexture(this.transform.position);
-    UpdateAmbienteSound();
+    //UpdateAmbienteSound();
     if (Input.GetKeyDown("i")) {
       inventory.ShowInventory();
     }
-    var aux = ppp.depthOfField.settings;
-    aux.focusDistance = task_1.Dist();
-    ppp.depthOfField.settings = aux;
+    //var aux = ppp.depthOfField.settings;
+    //aux.focusDistance = task_1.Dist();
+    //ppp.depthOfField.settings = aux;
+  }
+
+  private void RayCast() {
+    int layerMask = 1 << 8;
+    layerMask = ~layerMask;
+    Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+
+    RaycastHit hit;
+    if (Physics.Raycast(ray, out hit, 2f)) {
+      lookAt = hit.collider.gameObject;
+      //print("I'm looking at " + hit.collider.name);
+    } else {
+      lookAt = null;
+      //print("I'm looking at nothing!");
+    }
+    /*
+    if (Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, 5f, layerMask)) {
+    Debug.Log(hit.collider.name);
+    lookAt = hit.collider.gameObject;
+    Debug.DrawRay(transform.position, Camera.main.transform.forward * 5f, Color.red);
+    } else {
+    lookAt = null;
+    }
+    */
+    //Debug.DrawRay(transform.position, Camera.main.transform.forward * 1000, Color.white);
   }
 
   public void AddItem(Item item) {
@@ -124,6 +150,36 @@ public class Player : MonoBehaviour {
   public bool UnderLake {
     get { return underlake; }
     private set { this.underlake = value; }
+  }
+
+  public IEnumerator VisualStingerSaturation() {
+    var aux_1 = ppp.colorGrading.settings;
+    var aux_2 = ppp.colorGrading.settings;
+    while (aux_2.basic.saturation <= 1f) {
+      aux_2.basic.saturation += 0.1f;
+      ppp.colorGrading.settings = aux_2;
+      yield return new WaitForSeconds(0.1f);
+    }
+    while (aux_2.basic.saturation >= aux_1.basic.saturation) {
+      aux_2.basic.saturation -= 0.1f;
+      ppp.colorGrading.settings = aux_2;
+      yield return new WaitForSeconds(0.1f);
+    }
+  }
+
+  public IEnumerator VisualStingerFocus() {
+    var aux_1 = ppp.depthOfField.settings;
+    var aux_2 = ppp.depthOfField.settings;
+    while (aux_2.focusDistance <= 3f) {
+      aux_2.focusDistance += 0.1f;
+      ppp.depthOfField.settings = aux_2;
+      yield return new WaitForSeconds(0.1f);
+    }
+    while (aux_2.focusDistance >= aux_1.focusDistance) {
+      aux_2.focusDistance -= 0.1f;
+      ppp.depthOfField.settings = aux_2;
+      yield return new WaitForSeconds(0.1f);
+    }
   }
 
   private void OnTriggerExit(Collider other) {
@@ -159,5 +215,15 @@ public class Player : MonoBehaviour {
 
   public void MuteAudioSteps(bool s) {
     this.GetComponent<AudioSource>().mute = s;
+  }
+
+  public GameObject LookAt {
+    get {
+      return this.lookAt;
+    }
+  }
+
+  public bool HasItem(int id) {
+    return inventory.CheckItem(id);
   }
 }

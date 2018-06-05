@@ -1,0 +1,290 @@
+fileFormatVersion: 2
+guid: c9cfab96133c75c48998177410bad373
+timeCreated: 1528198100
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Door_front
+    100002: Door_handle
+    100004: Door_upstairs
+    100006: front_door
+    100008: front_floor
+    100010: House
+    100012: interior_ground_floor
+    100014: interior_roof
+    100016: //RootNode
+    100018: Roof
+    100020: stairs_and_fences
+    100022: Wall1
+    100024: Wall2
+    100026: Wall3
+    100028: Wall4
+    100030: Window2
+    100032: Window_big
+    100034: Window_big004
+    100036: Window_big005
+    100038: Window_big006
+    100040: Window_big007
+    100042: Window_big3
+    100044: window_big8
+    100046: Window_front
+    100048: Window_front001
+    100050: Window_front002
+    100052: Window_right
+    100054: Window_right001
+    100056: Window_small003
+    100058: Window_small004
+    100060: Window_small2
+    100062: Windows_frames
+    100064: windows_glasses
+    400000: Door_front
+    400002: Door_handle
+    400004: Door_upstairs
+    400006: front_door
+    400008: front_floor
+    400010: House
+    400012: interior_ground_floor
+    400014: interior_roof
+    400016: //RootNode
+    400018: Roof
+    400020: stairs_and_fences
+    400022: Wall1
+    400024: Wall2
+    400026: Wall3
+    400028: Wall4
+    400030: Window2
+    400032: Window_big
+    400034: Window_big004
+    400036: Window_big005
+    400038: Window_big006
+    400040: Window_big007
+    400042: Window_big3
+    400044: window_big8
+    400046: Window_front
+    400048: Window_front001
+    400050: Window_front002
+    400052: Window_right
+    400054: Window_right001
+    400056: Window_small003
+    400058: Window_small004
+    400060: Window_small2
+    400062: Windows_frames
+    400064: windows_glasses
+    2100000: 'Material #1'
+    2100002: 08 - Default
+    2100004: 02 - Default
+    2100006: 03 - Default
+    2100008: No Name
+    2300000: Door_front
+    2300002: Door_handle
+    2300004: Door_upstairs
+    2300006: front_floor
+    2300008: House
+    2300010: interior_ground_floor
+    2300012: interior_roof
+    2300014: Roof
+    2300016: stairs_and_fences
+    2300018: Wall1
+    2300020: Wall2
+    2300022: Wall3
+    2300024: Wall4
+    2300026: Window2
+    2300028: Window_big
+    2300030: Window_big004
+    2300032: Window_big005
+    2300034: Window_big006
+    2300036: Window_big007
+    2300038: Window_big3
+    2300040: window_big8
+    2300042: Window_front
+    2300044: Window_front001
+    2300046: Window_front002
+    2300048: Window_right
+    2300050: Window_right001
+    2300052: Window_small003
+    2300054: Window_small004
+    2300056: Window_small2
+    2300058: windows_glasses
+    3300000: Door_front
+    3300002: Door_handle
+    3300004: Door_upstairs
+    3300006: front_floor
+    3300008: House
+    3300010: interior_ground_floor
+    3300012: interior_roof
+    3300014: Roof
+    3300016: stairs_and_fences
+    3300018: Wall1
+    3300020: Wall2
+    3300022: Wall3
+    3300024: Wall4
+    3300026: Window2
+    3300028: Window_big
+    3300030: Window_big004
+    3300032: Window_big005
+    3300034: Window_big006
+    3300036: Window_big007
+    3300038: Window_big3
+    3300040: window_big8
+    3300042: Window_front
+    3300044: Window_front001
+    3300046: Window_front002
+    3300048: Window_right
+    3300050: Window_right001
+    3300052: Window_small003
+    3300054: Window_small004
+    3300056: Window_small2
+    3300058: windows_glasses
+    4300000: House
+    4300002: Roof
+    4300004: Door_upstairs
+    4300006: interior_ground_floor
+    4300008: interior_roof
+    4300010: stairs_and_fences
+    4300012: front_floor
+    4300014: windows_glasses
+    4300016: Window_big
+    4300018: Window_big3
+    4300020: Window_big004
+    4300022: Window_big005
+    4300024: Window_big006
+    4300026: Window_big007
+    4300028: window_big8
+    4300030: Window_front
+    4300032: Window_front001
+    4300034: Window_front002
+    4300036: Window_right
+    4300038: Window_right001
+    4300040: Window_small2
+    4300042: Window_small003
+    4300044: Window_small004
+    4300046: Window2
+    4300048: Door_handle
+    4300050: Door_front
+    4300052: Wall1
+    4300054: Wall2
+    4300056: Wall3
+    4300058: Wall4
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 6fce71b58a49b504eb062b4d9805c497, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 5aaa87c5002f5aa4f8f21ff45c9859a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default
+    second: {fileID: 2100000, guid: 4eecce0a1ab0b424e9b41d7478b9c07e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #1'
+    second: {fileID: 2100000, guid: b98bb6b66fc408b43ae217e56f532dd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 8810172a56b1dcd4a99889d15e93f46a, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Finishes.Flooring.Wood.Plank.Beech
+    second: {fileID: 2800000, guid: 31da87a90f3e4ec45986bafa28e8d8b8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wooden_desks
+    second: {fileID: 2800000, guid: 130504c4c0d6a814bb582d45fdd3f0e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: js_woodslats
+    second: {fileID: 2800000, guid: 285aefa8ddda76540bd6fe9c55dbd0ee, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -49,4 +49,11 @@ public class Inventory : MonoBehaviour {
     gameObject.transform.parent = panel.transform;
 
   }
+
+  public bool CheckItem(int id) {
+    foreach (Item item in items) {
+      if (item._id == id) return true;
+    }
+    return false;
+  }
 }
