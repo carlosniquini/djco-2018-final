@@ -6,10 +6,12 @@ using System;
 public class Door : MonoBehaviour {
 
   private Player player;
+  private GameController gameController;
   private AudioSource audioSource;
   private bool isOpen = false;
   public AudioClip[] audioClip;
   public int key_id;
+  public AudioClip dialog;
 
   private void Awake() {
 
@@ -18,6 +20,7 @@ public class Door : MonoBehaviour {
   // Use this for initialization
   void Start () {
     player = GameObject.Find("FPSController").GetComponent<Player>();
+    gameController = GameObject.Find("GameController").GetComponent<GameController>();
     audioSource = this.GetComponent<AudioSource>();
   }
 
@@ -36,7 +39,7 @@ public class Door : MonoBehaviour {
       audioSource.clip = isOpen ? audioClip[0] : audioClip[1];
       audioSource.Play();
     } else {
-      Debug.Log("Trancada :/");
+      gameController.PlayDialogue(dialog);
     }
   }
 }

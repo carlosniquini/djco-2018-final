@@ -6,7 +6,13 @@ public abstract class Task : MonoBehaviour {
 
   public int id;
   public string name_;
-  public bool status;
+  public int[] itens;
+  public Photo[] photosToAdd;
+  public Item[] itensToAdd;
+  public bool status = false;
   public AudioClip intro_dialogue;
+  public bool dialog;
+  public bool action;
+  public bool puzzle;
 
 }

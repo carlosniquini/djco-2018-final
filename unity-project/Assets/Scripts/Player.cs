@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
     ppp.colorGrading.settings = aux_2;
     yield return new WaitForSeconds(10f);
     MuteAudioSteps(false);
-    while (aux.intensity >= 0) {
+    while (alpha >= 0 || aux_2.basic.saturation >= 0f) {
       aux.intensity -= 0.01f;
       ppp.vignette.settings = aux;
       aux_2.basic.saturation -= 0.01f;
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour {
     RaycastHit hit;
     if (Physics.Raycast(ray, out hit, 2f)) {
       lookAt = hit.collider.gameObject;
-      //print("I'm looking at " + hit.collider.name);
+      print("I'm looking at " + hit.collider.name);
     } else {
       lookAt = null;
       //print("I'm looking at nothing!");
@@ -226,4 +226,21 @@ public class Player : MonoBehaviour {
   public bool HasItem(int id) {
     return inventory.CheckItem(id);
   }
+
+  public void ImproveMemory() {
+    StartCoroutine(Improve());
+  }
+
+  private IEnumerator Improve() {
+    float gain = 0;
+    var aux_2 = ppp.colorGrading.settings;
+    while (gain <= 0.3) {
+      gain += 0.01f;
+      aux_2.basic.saturation += 0.01f;
+      ppp.colorGrading.settings = aux_2;
+      yield return new WaitForSeconds(0.1f);
+    }
+
+  }
+
 }

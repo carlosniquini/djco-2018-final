@@ -41,6 +41,11 @@ public class Smartphone : MonoBehaviour {
 
   public void PlayStinger() {
     isFirst = false;
+    StartCoroutine(Stinger());
+  }
+
+  private IEnumerator Stinger() {
+    yield return new WaitForSeconds(0.5f);
     audioSource.clip = audioClip;
     audioSource.Play();
   }

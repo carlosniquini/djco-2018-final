@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
 
   private Player player;
   private AudioSource audioSourceAmbiente;
+  public BITalinoReader reader;
   public AudioSource[] lakeSounds;
   public AudioClip ambiente;
   public AudioClip[] specialSounds;
@@ -52,10 +53,14 @@ public class GameController : MonoBehaviour {
   // Update is called once per frame
   void Update () {
     SwitchLakeSounds();
+    if (reader.asStart)
+      Debug.Log(reader.getTime());
   }
 
   public void PlayDialogue(AudioClip a) {
-    this.GetComponent<AudioSource>().clip = a;
-    this.GetComponent<AudioSource>().Play();
+    if (!this.GetComponent<AudioSource>().isPlaying) {
+      this.GetComponent<AudioSource>().clip = a;
+      this.GetComponent<AudioSource>().Play();
+    }
   }
 }
