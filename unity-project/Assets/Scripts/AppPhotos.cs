@@ -16,6 +16,7 @@ public class AppPhotos : MonoBehaviour {
   public GameObject desktop;
   public Photo photo_house;
   public Photo photo_playground;
+  public Text signal, percentage;
 
   private ArrayList photosList = new ArrayList();
 
@@ -43,6 +44,13 @@ public class AppPhotos : MonoBehaviour {
     }
     AddPhoto();
     this.GetComponent<Animator>().SetBool("isDisplayed", isDisplayed = !isDisplayed);
+    if (isDisplayed) {
+      signal.color = Color.black;
+      percentage.color = Color.black;
+    } else {
+      signal.color = Color.white;
+      percentage.color = Color.white;
+    }
     desktop.SetActive(!isDisplayed);
   }
 

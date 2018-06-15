@@ -16,5 +16,6 @@ public abstract class Task : MonoBehaviour {
   public bool dialog;
   public bool action;
   public bool puzzle;
+  public Task previous;
 
 }

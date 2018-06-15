@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AppMsg : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class AppMsg : MonoBehaviour {
   private bool isFirst = true;
   private Smartphone smartphone;
   public GameObject desktop;
+  public Text signal, percentage;
 
   // Use this for initialization
   void Start () {
@@ -25,6 +27,13 @@ public class AppMsg : MonoBehaviour {
       isFirst = false;
     }
     this.GetComponent<Animator>().SetBool("isDisplayed", isDisplayed = !isDisplayed);
+    if (isDisplayed) {
+      signal.color = Color.black;
+      percentage.color = Color.black;
+    } else {
+      signal.color = Color.white;
+      percentage.color = Color.white;
+    }
     desktop.SetActive(!isDisplayed);
   }
 }

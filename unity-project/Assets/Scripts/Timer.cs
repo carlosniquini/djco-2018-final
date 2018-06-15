@@ -16,10 +16,13 @@ public class Timer : MonoBehaviour {
   //public GameObject gameOverText;
   private Text clock;
   private int hh, mm;
+  private FlashLight flashLight;
+  private GameController gameController;
 
   // Use this for initialization
   void Start () {
-
+    flashLight = GameObject.Find("flashlight").GetComponent<FlashLight>();
+    gameController = GameObject.Find("GameController").GetComponent<GameController>();
     //gameOverText.SetActive(false);
     float percent = TotalTimeOfGameInMinutes * (MissingPercentage / 100); //percentage that lack of battery to the cell
     //Debug.Log(percent);
@@ -35,7 +38,7 @@ public class Timer : MonoBehaviour {
     if (timeLeft > RedBatteryStartsInMinutes * 60) {
 
       RedBatteryImage.enabled = false;
-      timeLeft -= Time.deltaTime;
+      timeLeft -= Time.deltaTime * (flashLight.activateFlashlight ? 10 : 1);
       FullBatteryImage.fillAmount = timeLeft / ((TotalTimeOfGameInMinutes) * 60 );
       updatePercentage();
 
@@ -54,7 +57,7 @@ public class Timer : MonoBehaviour {
   }
 
   void GameOver() {
-
+    gameController.GameOver();
     //gameOverText.SetActive(true);
     //Time.timeScale = 0;
 

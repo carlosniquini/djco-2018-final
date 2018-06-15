@@ -60,7 +60,7 @@ public class Smartphone : MonoBehaviour {
   }
 
   private IEnumerator Stinger() {
-    yield return new WaitForSeconds(0.5f);
+    yield return new WaitForSeconds(1f);
     audioSource.clip = audioClip;
     audioSource.Play();
   }
