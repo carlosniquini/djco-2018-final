@@ -10,20 +10,35 @@ public class Smartphone : MonoBehaviour {
   private AudioSource audioSource;
   private bool isDisplayed = false;
   private bool isFirst = true;
+  private ScreenTips screenTips;
+  private GameController gameController;
+  private bool active = false;
   public GameObject desktop;
   public AudioClip audioClip;
 
   // Use this for initialization
   void Start () {
     fpsController = GameObject.Find("FPSController").GetComponent<FirstPersonController>();
+    gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    screenTips = GameObject.Find("ScreenTips").GetComponent<ScreenTips>();
     player = GameObject.Find("FPSController").GetComponent<Player>();
     desktop.SetActive(true);
     audioSource = this.GetComponent<AudioSource>();
+    StartCoroutine(ShowSmartphoneTip());
+  }
+
+  private IEnumerator ShowSmartphoneTip() {
+    yield return new WaitForSeconds(10);
+    while (gameController.gameObject.GetComponent<AudioSource>().isPlaying) {
+      yield return new WaitForSeconds(0);
+    }
+    active = true;
+    screenTips.ShowTipUntil("Press Q to open your smartphone.", "q");
   }
 
   // Update is called once per frame
   void Update () {
-    if (Input.GetKeyDown("q")) {
+    if (Input.GetKeyDown("q") && active && !gameController.IsOver) {
       if (isFirst) {
         StartCoroutine(player.VisualStingerSaturation());
         StartCoroutine(player.VisualStingerFocus());

@@ -707,7 +707,57 @@ ModelImporter:
     10800002: Sky004
     10800004: Sun002
     10800006: Sun004
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Stone_02_COLOR
+    second: {fileID: 2800000, guid: 357e1b7d4905a7e4194e47542d96bf19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Stone_02_DISP
+    second: {fileID: 2800000, guid: 9a90965f00d4a2f4aa5fa82a7117d206, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Stone_02_SPEC
+    second: {fileID: 2800000, guid: 2cbd780f4f2731944a03ec067b7d3c44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: grass_grass_0024_01_preview
+    second: {fileID: 2800000, guid: 0288af8307cb8d84bb43eb04002375e2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: grass_grass_0024_01_preview-pb
+    second: {fileID: 2800000, guid: 1fe34d83e1c3c124d81e51707ccd2096, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rope_texture2093
+    second: {fileID: 2800000, guid: 19a2d94ad6c7c2c408b2a3e441e7209d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rope_texture2093-pb
+    second: {fileID: 2800000, guid: 1458bf5a0e71c154bbb8dffc2c249c67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wildtextures-old-wood-original
+    second: {fileID: 2800000, guid: 6cd8a9e6fea99cf418936b7f75a603ff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wildtextures-old-wood-original-file
+    second: {fileID: 2800000, guid: 765921ae9a886b048a291ce43f7c3d9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wildtextures-old-wood-original-vermelho
+    second: {fileID: 2800000, guid: 726c983b43d137e4e8b3539f23d90c25, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

@@ -32,7 +32,17 @@ ModelImporter:
     4300002: parede1
     4300004: parede2
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: oncrete_blocks
+    second: {fileID: 2800000, guid: 8ac56b973212135429237a0b5a293d5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rock-wall-6-1
+    second: {fileID: 2800000, guid: 3d789374276e30d49b0596e0d07cd5b1, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

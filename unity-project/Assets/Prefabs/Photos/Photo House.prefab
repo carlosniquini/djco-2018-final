@@ -45,7 +45,7 @@ MonoBehaviour:
   _name: House
   image_low: {fileID: 21300000, guid: 8de0bb3296b15ab4796f1561ff3ebd30, type: 3}
   image_high: {fileID: 21300000, guid: 7f58b05e39160c94992e100c2618f477, type: 3}
-  sound: {fileID: 0}
+  dialog: {fileID: 8300000, guid: a375a004ab877e443922e4023d66ecfa, type: 3}
 --- !u!114 &114670232173807136
 MonoBehaviour:
   m_ObjectHideFlags: 1

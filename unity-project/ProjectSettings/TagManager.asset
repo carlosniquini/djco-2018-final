@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - pickup
   - lake
+  - Floor
+  - Path
   layers:
   - Default
   - TransparentFX

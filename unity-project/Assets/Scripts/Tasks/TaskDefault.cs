@@ -5,6 +5,7 @@ using UnityEngine;
 public class TaskDefault : Task {
 
   private Player player;
+  private ScreenTips screenTips;
   private AppPhotos appPhotos;
   private float dist;
   private bool played = false;
@@ -15,6 +16,7 @@ public class TaskDefault : Task {
   // Use this for initialization
   void Start () {
     player = GameObject.Find("FPSController").GetComponent<Player>();
+    screenTips = GameObject.Find("ScreenTips").GetComponent<ScreenTips>();
     appPhotos = GameObject.Find("AppPhotos").GetComponent<AppPhotos>();
     gameController = GameObject.Find("GameController").GetComponent<GameController>();
     options = GameObject.Find("Options").GetComponent<Options>();
@@ -25,22 +27,37 @@ public class TaskDefault : Task {
     dist = Vector3.Distance(gameObject.transform.position, player.GetComponent<Transform>().position);
     IsNear();
     if (action) TaskAction();
+    if (dialog) TaskDialog();
     //float aux = (dist - 2) / (400 - 2);
     //Debug.Log(3 - aux * 2.9);
   }
 
   private void TaskAction() {
     if (!status && hasPlayer && Input.GetKeyDown("e")) {
-      if (HasAllItens()) {
-        Debug.Log("Sucesso querida!");
+      if (!status && HasAllItens()) {
+        //Debug.Log("Sucesso querida!");
+        screenTips.ShowTip("New photo added to Gallery");
         status = true;
         player.ImproveMemory();
         foreach (Photo p in photosToAdd) {
           appPhotos.AddPhotoInList(p);
         }
       } else {
-        Debug.Log("Huum... eu deveria procurar todos os itens.");
+        //gameController.PlayDialogue(wrong_dialogue);
+        screenTips.ShowTip("Find all the items");
+        //Debug.Log("Huum... eu deveria procurar todos os itens.");
       }
+    }
+  }
+
+  private void TaskDialog() {
+    if (hasPlayer && Input.GetKeyDown("e")) {
+      if (!played) {
+        StartCoroutine(player.VisualStingerFocus());
+        //player.ImproveMemory();
+      }
+      gameController.PlayDialogue(intro_dialogue);
+      played = true;
     }
   }
 
@@ -55,17 +72,17 @@ public class TaskDefault : Task {
     float aux = (dist - 2) / (400 - 2);
     return (4 - aux * 3.9f);
   }
-
+  /*
   private void OnTriggerStay(Collider other) {
-    if (other.gameObject.name == "FPSController" && !played && hasPlayer) {
-      if (Input.GetKeyDown("e")) {
-        gameController.PlayDialogue(intro_dialogue);
-        StartCoroutine(player.VisualStingerFocus());
-        player.ImproveMemory();
-        played = true;
-      }
+  if (other.gameObject.name == "FPSController" && !played && hasPlayer) {
+    if (Input.GetKeyDown("e")) {
+      gameController.PlayDialogue(intro_dialogue);
+      StartCoroutine(player.VisualStingerFocus());
+      player.ImproveMemory();
+      played = true;
     }
   }
+  }*/
 
   private void IsNear() {
     float dist = Vector3.Distance(gameObject.transform.position, player.GetComponent<Transform>().position);
@@ -83,5 +100,14 @@ public class TaskDefault : Task {
     get {
       return this.player;
     }
+  }
+
+  public void LastTask() {
+    StartCoroutine(LastTaskCorountine());
+  }
+
+  private IEnumerator LastTaskCorountine() {
+    yield return new WaitForSeconds(1);
+    gameController.Completed();
   }
 }

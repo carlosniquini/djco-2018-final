@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.PostProcessing;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class GameController : MonoBehaviour {
 
   private Player player;
+  private FirstPersonController fpsController;
+  private Image panelIntro;
   private AudioSource audioSourceAmbiente;
+  private bool isOver = false;
   public BITalinoReader reader;
   public AudioSource[] lakeSounds;
   public AudioClip ambiente;
@@ -17,14 +22,18 @@ public class GameController : MonoBehaviour {
   // Use this for initialization
   void Start () {
     player = GameObject.Find("FPSController").GetComponent<Player>();
+    fpsController = GameObject.Find("FPSController").GetComponent<FirstPersonController>();
+    panelIntro = GameObject.Find("PanelIntro").GetComponent<Image>();
     audioSourceAmbiente = GameObject.Find("FirstPersonCharacter").GetComponent<AudioSource>();
+    //panelIntro.GetComponentInChildren<Text>().gameObject.SetActive(false);
     StartCoroutine(GamePlaySounds());
+    StartCoroutine(Wind());
   }
 
   IEnumerator GamePlaySounds() {
     while (true) {
       yield return new WaitForSeconds(180f);
-      if (UnityEngine.Random.Range(1, 100) > 50) {
+      if (UnityEngine.Random.Range(0, 100) > 50) {
         int idx = Random.Range(0, specialSounds.Length);
         AudioClip clip = specialSounds[idx];
         audioSourceAmbiente.clip = clip;
@@ -58,9 +67,66 @@ public class GameController : MonoBehaviour {
   }
 
   public void PlayDialogue(AudioClip a) {
-    if (!this.GetComponent<AudioSource>().isPlaying) {
-      this.GetComponent<AudioSource>().clip = a;
-      this.GetComponent<AudioSource>().Play();
+    AudioSource source = this.GetComponents<AudioSource>()[0];
+    if (!source.isPlaying) {
+      source.clip = a;
+      source.Play();
     }
   }
+
+  private IEnumerator Wind() {
+    AudioSource source = this.GetComponents<AudioSource>()[1];
+    while (true) {
+      yield return new WaitForSeconds(60f);
+      if (!player.UnderLake && !player.WalkeFloor && UnityEngine.Random.Range(0, 100) > 60) {
+        if (!source.isPlaying) {
+          source.Play();
+        }
+      }
+    }
+  }
+
+  public void GameOver() {
+    StartCoroutine(OverCoroutine("Game Over!", false));
+  }
+
+  public void Completed() {
+    StartCoroutine(OverCoroutine("to be continued...", true));
+  }
+
+  private IEnumerator OverCoroutine(string str, bool s) {
+    Destroy(fpsController);
+    isOver = true;
+    float alpha = 0;
+    panelIntro.color = new Color(panelIntro.color.r, panelIntro.color.g, panelIntro.color.b, alpha);
+    while (alpha <= 1) {
+      panelIntro.color = new Color(panelIntro.color.r, panelIntro.color.g, panelIntro.color.b, alpha += 0.2f * Time.deltaTime);
+      yield return new WaitForSeconds(0.1f);
+    }
+    if(s)
+      panelIntro.GetComponentInChildren<AudioSource>().Play();
+    panelIntro.GetComponentInChildren<Text>().gameObject.SetActive(true);
+    Text text = panelIntro.GetComponentInChildren<Text>();
+    text.text = str;
+    alpha = 0;
+    text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
+    while (alpha <= 1) {
+      text.color = new Color(text.color.r, text.color.g, text.color.b, alpha += 0.2f * Time.deltaTime);
+      yield return new WaitForSeconds(0.1f);
+    }
+    yield return new WaitForSeconds(1f);
+    while (alpha >= 0) {
+      text.color = new Color(text.color.r, text.color.g, text.color.b, alpha -= 0.2f * Time.deltaTime);
+      yield return new WaitForSeconds(0.1f);
+    }
+    SceneManager.LoadScene("menu");
+  }
+
+  public bool IsOver {
+    get
+    {
+      return this.isOver;
+    }
+  }
+
 }

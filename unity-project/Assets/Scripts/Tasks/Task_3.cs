@@ -8,10 +8,11 @@ public class Task_3 : TaskDefault {
 
   void Update() {
     //status = TaskPuzze();
-    if (!status && TaskPuzze() && Player.LookAt != null && Player.LookAt.name == this.name) {
+    if (!status && TaskPuzze() && Player.LookAt != null && Player.LookAt.name == this.name && this.GetComponentInChildren<Spot>().HasPlayer) {
       Debug.Log("Agora eu me lembro!");
       Player.ImproveMemory();
       status = true;
+      LastTask();
     }
   }
 

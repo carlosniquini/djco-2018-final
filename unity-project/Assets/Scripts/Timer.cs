@@ -9,21 +9,23 @@ public class Timer : MonoBehaviour {
   public Image RedBatteryImage;
   //public Image batterySaving; //If we make a battery saving mode
   private float timeLeft;
-  public float MissingPercentage = 15;
+  public float MissingPercentage = 55;
   public Text percentageText;
   public float TotalTimeOfGameInMinutes = 250; //max time of the game in MINUTOS --> 15000 sec = 250 min = 4.16 horas
   public float RedBatteryStartsInMinutes = 20;
-  public GameObject gameOverText;
+  //public GameObject gameOverText;
   private Text clock;
   private int hh, mm;
 
   // Use this for initialization
   void Start () {
 
-    gameOverText.SetActive(false);
-    float percent = TotalTimeOfGameInMinutes * MissingPercentage / 100; //percentage that lack of battery to the cell
+    //gameOverText.SetActive(false);
+    float percent = TotalTimeOfGameInMinutes * (MissingPercentage / 100); //percentage that lack of battery to the cell
+    //Debug.Log(percent);
+    //percent = 137.5f;
     timeLeft = (TotalTimeOfGameInMinutes - percent) * 60;
-    percentageText.text = (100 - MissingPercentage).ToString() + "%";
+    if (percentageText != null) percentageText.text = (100 - MissingPercentage).ToString() + "%";
 
   }
 
@@ -53,14 +55,14 @@ public class Timer : MonoBehaviour {
 
   void GameOver() {
 
-    gameOverText.SetActive(true);
-    Time.timeScale = 0;
+    //gameOverText.SetActive(true);
+    //Time.timeScale = 0;
 
   }
 
   void updatePercentage() {
 
-    percentageText.text = (Math.Round(this.timeLeft / ((this.TotalTimeOfGameInMinutes) * 60 ) * 100)).ToString() + "%";
+    if (percentageText != null) percentageText.text = (Math.Round(this.timeLeft / ((this.TotalTimeOfGameInMinutes) * 60 ) * 100)).ToString() + "%";
 
   }
 }
