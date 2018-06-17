@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: fa8a077f6d4e5994886dc35674d7b843
+timeCreated: 1529078739
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cucina1
+    100004: Cucina2
+    100006: Cucina3
+    100008: Cucina4
+    100010: Frigorifero
+    100012: Gas
+    100014: //RootNode
+    100016: Lamp
+    100018: Maniglia
+    100020: Maniglia.001
+    100022: Maniglia.002
+    100024: Maniglia.003
+    100026: Maniglie
+    100028: Pensile1
+    100030: Pensile2
+    100032: Pulsanti
+    100034: Rubinetto
+    400000: Camera
+    400002: Cucina1
+    400004: Cucina2
+    400006: Cucina3
+    400008: Cucina4
+    400010: Frigorifero
+    400012: Gas
+    400014: //RootNode
+    400016: Lamp
+    400018: Maniglia
+    400020: Maniglia.001
+    400022: Maniglia.002
+    400024: Maniglia.003
+    400026: Maniglie
+    400028: Pensile1
+    400030: Pensile2
+    400032: Pulsanti
+    400034: Rubinetto
+    2000000: Camera
+    2100000: Material.008
+    2100002: Material.004
+    2100004: Material.007
+    2100006: Material.006
+    2100008: Material.002
+    2100010: Material.003
+    2100012: Material.001
+    2300000: Cucina1
+    2300002: Cucina2
+    2300004: Cucina3
+    2300006: Cucina4
+    2300008: Frigorifero
+    2300010: Gas
+    2300012: Maniglia
+    2300014: Maniglia.001
+    2300016: Maniglia.002
+    2300018: Maniglia.003
+    2300020: Maniglie
+    2300022: Pensile1
+    2300024: Pensile2
+    2300026: Pulsanti
+    2300028: Rubinetto
+    3300000: Cucina1
+    3300002: Cucina2
+    3300004: Cucina3
+    3300006: Cucina4
+    3300008: Frigorifero
+    3300010: Gas
+    3300012: Maniglia
+    3300014: Maniglia.001
+    3300016: Maniglia.002
+    3300018: Maniglia.003
+    3300020: Maniglie
+    3300022: Pensile1
+    3300024: Pensile2
+    3300026: Pulsanti
+    3300028: Rubinetto
+    4300000: Gas
+    4300002: Cucina1
+    4300004: Pulsanti
+    4300006: Cucina2
+    4300008: Maniglia.003
+    4300010: Pensile1
+    4300012: Maniglia.002
+    4300014: Maniglia.001
+    4300016: Maniglia
+    4300018: Frigorifero
+    4300020: Pensile2
+    4300022: Maniglie
+    4300024: Cucina4
+    4300026: Rubinetto
+    4300028: Cucina3
+    10800000: Lamp
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 822eb249f24f5aa4f87593b73eb7668f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: f71eefda211b99b45891cf78e5fd716f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 1a49f8ab243be644b8f946291b6a2221, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: d41b971d5feddbe449096e8d564244ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: c029a16f477e448449a953f82cc4f475, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: 0f0873b7941ea884394aa3f3e034bed7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: ac1a91b5e5c702344a5e4e16a15500e0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

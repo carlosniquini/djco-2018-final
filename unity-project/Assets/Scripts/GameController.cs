@@ -18,6 +18,10 @@ public class GameController : MonoBehaviour {
   public AudioClip ambiente;
   public AudioClip[] specialSounds;
 
+  private Button power, restart;
+  private Toggle bitalino, mute;
+  private bool usingBitalino = false;
+
 
   // Use this for initialization
   void Start () {
@@ -26,6 +30,29 @@ public class GameController : MonoBehaviour {
     panelIntro = GameObject.Find("PanelIntro").GetComponent<Image>();
     audioSourceAmbiente = GameObject.Find("FirstPersonCharacter").GetComponent<AudioSource>();
     //panelIntro.GetComponentInChildren<Text>().gameObject.SetActive(false);
+    power = GameObject.Find("ExitBtn").GetComponent<Button>();
+    restart = GameObject.Find("RestartBtn").GetComponent<Button>();
+    mute = GameObject.Find("MuteToggle").GetComponent<Toggle>();
+    bitalino = GameObject.Find("BitalinoToggle").GetComponent<Toggle>();
+
+    mute.onValueChanged.AddListener(delegate {
+      foreach (AudioSource a in GameObject.FindObjectsOfType<AudioSource>()) {
+        a.mute = mute.isOn;
+      }
+    });
+
+    bitalino.onValueChanged.AddListener(delegate {
+      usingBitalino = bitalino.isOn;
+    });
+
+    power.onClick.AddListener(delegate {
+      SceneManager.LoadScene("menu");
+    });
+
+    restart.onClick.AddListener(delegate {
+      SceneManager.LoadScene("main");
+    });
+
     StartCoroutine(GamePlaySounds());
     StartCoroutine(Wind());
   }
@@ -62,8 +89,6 @@ public class GameController : MonoBehaviour {
   // Update is called once per frame
   void Update () {
     SwitchLakeSounds();
-    if (reader.asStart)
-      Debug.Log(reader.getTime());
   }
 
   public void PlayDialogue(AudioClip a) {
@@ -87,7 +112,7 @@ public class GameController : MonoBehaviour {
   }
 
   public void GameOver() {
-    StartCoroutine(OverCoroutine("Game Over!", false));
+    StartCoroutine(OverCoroutine("You've been forgotten...", false));
   }
 
   public void Completed() {
@@ -119,13 +144,22 @@ public class GameController : MonoBehaviour {
       text.color = new Color(text.color.r, text.color.g, text.color.b, alpha -= 0.2f * Time.deltaTime);
       yield return new WaitForSeconds(0.1f);
     }
-    SceneManager.LoadScene("menu");
+    if(s)
+      SceneManager.LoadScene("end");
+    else
+      SceneManager.LoadScene("menu");
   }
 
   public bool IsOver {
     get
     {
       return this.isOver;
+    }
+  }
+
+  public bool UsingBitalino {
+    get {
+      return this.usingBitalino;
     }
   }
 

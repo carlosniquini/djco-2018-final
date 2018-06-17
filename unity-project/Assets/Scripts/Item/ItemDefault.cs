@@ -30,6 +30,8 @@ public class ItemDefault : Item {
     }
     if (beingCarried) {
       if (Input.GetKeyDown("e")) {
+        player.GetComponent<AudioSource>().clip = sound;
+        player.GetComponent<AudioSource>().Play();
         GetComponent<Rigidbody>().isKinematic = false;
         transform.parent = null;
         beingCarried = false;
@@ -40,6 +42,8 @@ public class ItemDefault : Item {
     }
     if (isPickable && hasPlayer) {
       if (Input.GetKeyDown("e")) {
+        player.GetComponent<AudioSource>().clip = sound;
+        player.GetComponent<AudioSource>().Play();
         GetComponent<Rigidbody>().isKinematic = true;
         transform.parent = playerCam;
         beingCarried = true;

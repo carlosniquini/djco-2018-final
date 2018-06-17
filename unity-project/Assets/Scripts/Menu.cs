@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
@@ -13,6 +14,7 @@ public class Menu : MonoBehaviour {
   private int drawDepth = -1000;
   private float alpha = 1.0f;
   private int fadeDir = -1;
+  private Text text;
 
   private void OnGUI() {
     alpha += fadeDir * speed * Time.deltaTime;
@@ -33,26 +35,34 @@ public class Menu : MonoBehaviour {
   // Use this for initialization
   void Start () {
     animator = GameObject.Find("Main Camera").GetComponent<Animator>();
+    text = GameObject.Find("Text").GetComponent<Text>();
   }
 
   // Update is called once per frame
-  void Update () {
-    if (Input.GetKey(KeyCode.Escape)) {
-      About(false);
-      Config(false);
+  void Update() {
+    if (Input.GetKeyDown(KeyCode.Escape)) {
+      if (animator.GetBool("About") || animator.GetBool("Config")) {
+        About(false);
+        Config(false);
+      } else {
+        Debug.Log("SAIU");
+        Application.Quit();
+      }
     }
   }
 
   public void About(bool s) {
+    text.text = s ? "Back" : "Exit";
     animator.SetBool("About", s);
   }
 
   public void Config(bool s) {
+    text.text = s ? "Back" : "Exit";
     animator.SetBool("Config", s);
   }
 
   public void StartGame() {
-    StartCoroutine(Fade("intro"));
+    StartCoroutine(Fade("main"));
   }
 
   private IEnumerator Fade(string cena) {

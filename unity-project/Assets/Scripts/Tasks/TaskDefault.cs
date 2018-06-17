@@ -36,6 +36,7 @@ public class TaskDefault : Task {
     if (!status && hasPlayer && Input.GetKeyDown("e")) {
       if (!status && HasAllItens()) {
         //Debug.Log("Sucesso querida!");
+        this.GetComponent<AudioSource>().Play();
         screenTips.ShowTip("New photo added to Gallery");
         status = true;
         player.ImproveMemory();
@@ -43,8 +44,8 @@ public class TaskDefault : Task {
           appPhotos.AddPhotoInList(p);
         }
       } else {
-        //gameController.PlayDialogue(wrong_dialogue);
-        screenTips.ShowTip("Find all the items");
+        gameController.PlayDialogue(wrong_dialogue);
+        //screenTips.ShowTip("Find all the items");
         //Debug.Log("Huum... eu deveria procurar todos os itens.");
       }
     }

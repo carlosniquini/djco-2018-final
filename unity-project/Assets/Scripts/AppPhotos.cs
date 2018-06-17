@@ -42,6 +42,7 @@ public class AppPhotos : MonoBehaviour {
       smartphone.PlayStinger();
       isFirst = false;
     }
+    this.GetComponent<AudioSource>().Play();
     AddPhoto();
     this.GetComponent<Animator>().SetBool("isDisplayed", isDisplayed = !isDisplayed);
     if (isDisplayed) {

@@ -82,6 +82,7 @@ public class Player : MonoBehaviour {
     currentFocus = 1.5f;
     currentSaturation = 0f;
     isWaking = false;
+    //gameController.Completed();
     //gameController.GameOver();
     //screenTips.ShowTipUntil("Press Q to open your smartphone.", "q");
   }
@@ -117,6 +118,7 @@ public class Player : MonoBehaviour {
     if (Input.GetKeyDown("i") && !gameController.IsOver) {
       inventory.ShowInventory();
     }
+	Falling();
   }
 
   private float timeinair = 0;
