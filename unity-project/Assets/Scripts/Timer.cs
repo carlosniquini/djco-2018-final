@@ -14,8 +14,10 @@ public class Timer : MonoBehaviour {
   public float TotalTimeOfGameInMinutes = 250; //max time of the game in MINUTOS --> 15000 sec = 250 min = 4.16 horas
   public float RedBatteryStartsInMinutes = 20;
   //public GameObject gameOverText;
-  private Text clock;
-  private int hh, mm;
+  public Text clock;
+  private int hh = 21; 
+  private int mm = 47;
+  private float aux = 60f;
   private FlashLight flashLight;
   private GameController gameController;
 
@@ -35,6 +37,7 @@ public class Timer : MonoBehaviour {
   // Update is called once per frame
   void Update () {
     //Debug.Log(TotalTimeOfGameInMinutes * 60 - timeLeft);
+	Clock();
     if (timeLeft > RedBatteryStartsInMinutes * 60) {
 
       RedBatteryImage.enabled = false;
@@ -67,5 +70,24 @@ public class Timer : MonoBehaviour {
 
     if (percentageText != null) percentageText.text = (Math.Round(this.timeLeft / ((this.TotalTimeOfGameInMinutes) * 60 ) * 100)).ToString() + "%";
 
+  }
+  
+  void Clock(){
+	  if(clock != null){
+		  aux -= Time.deltaTime;
+		  if(aux <= 0){
+			  mm++;
+			  aux = 60f;
+		  }
+		  if(mm == 60){
+			  hh++;
+			  mm = 0;
+		  }
+		  if(hh == 25){
+			  hh = 0;
+		  }
+		  clock.text = "" + hh + ":" + mm.ToString("00");
+	  }
+	  
   }
 }

@@ -56,7 +56,15 @@ public class Player : MonoBehaviour {
     audioSourceSteps = this.GetComponent<AudioSource>();
     audioSourceAmbiente = this.GetComponentsInChildren<AudioSource>()[1];
     terrainController = GameObject.Find("Terrain").GetComponent<TerrainController>();
-    ChangeFoostepsSound(0);
+    
+	var focus = ppp.depthOfField.settings;
+    focus.focusDistance = 1.5f;
+    ppp.depthOfField.settings = focus;
+    var saturation = ppp.colorGrading.settings;
+    saturation.basic.saturation = 1f;
+    ppp.colorGrading.settings = saturation;
+	
+	ChangeFoostepsSound(0);
     StartCoroutine(Wake());
     StartCoroutine(Path());
   }
@@ -301,10 +309,10 @@ public class Player : MonoBehaviour {
       aux_1.focusDistance -= 0.01f;
       aux_2.basic.saturation -= 0.01f;
       ppp.depthOfField.settings = aux_1;
-      ppp.colorGrading.settings = aux_2;
+      ppp.colorGrading.settings = aux_2.basic.saturation >= 0 ? aux_2: ppp.colorGrading.settings;
       yield return new WaitForSeconds(0.1f);
     }
-    if (ppp.depthOfField.settings.focusDistance <= 0.1f) gameController.GameOver();
+    if (ppp.depthOfField.settings.focusDistance <= 0.1f && !die) gameController.GameOver();
   }
 
   private IEnumerator Heal() {

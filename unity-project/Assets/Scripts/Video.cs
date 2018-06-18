@@ -16,7 +16,7 @@ public class Video : MonoBehaviour {
   }
 
   IEnumerator playVideo() {
-    videoPlayer.Play();
+    //videoPlayer.Play();
     yield return new WaitForSeconds((float)videoPlayer.clip.length);
     SceneManager.LoadScene(goTo);
   }

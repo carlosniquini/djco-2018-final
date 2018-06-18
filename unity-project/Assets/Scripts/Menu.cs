@@ -16,6 +16,8 @@ public class Menu : MonoBehaviour {
   private int fadeDir = -1;
   private Text text;
 
+  public string goTo;
+  
   private void OnGUI() {
     alpha += fadeDir * speed * Time.deltaTime;
     alpha = Mathf.Clamp01(alpha);
@@ -62,7 +64,7 @@ public class Menu : MonoBehaviour {
   }
 
   public void StartGame() {
-    StartCoroutine(Fade("main"));
+    StartCoroutine(Fade(goTo));
   }
 
   private IEnumerator Fade(string cena) {
