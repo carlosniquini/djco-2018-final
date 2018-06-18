@@ -64,4 +64,10 @@ public class Smartphone : MonoBehaviour {
     audioSource.clip = audioClip;
     audioSource.Play();
   }
+  
+  public bool IsDisplayed{
+	  get{
+		  return this.isDisplayed;
+	  }
+  }
 }

@@ -128,7 +128,8 @@ public class Player : MonoBehaviour {
     }
 	Falling();
   }
-
+  private float timeinwater = 0;
+  private float deathtimer_water = 10;
   private float timeinair = 0;
   private float deathtimer = 2;
   private bool die = false;
@@ -144,6 +145,14 @@ public class Player : MonoBehaviour {
     if (die && this.GetComponent<CharacterController>().isGrounded && !gameController.IsOver) {
       gameController.GameOver();
     }
+	if(underlake){
+		timeinwater += Time.deltaTime;
+	}else{
+		timeinwater = 0;
+	}
+	if(timeinwater >= deathtimer_water && !gameController.IsOver){
+		gameController.GameOver();
+	}
   }
 
   private IEnumerator Path() {

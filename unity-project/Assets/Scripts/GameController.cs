@@ -93,7 +93,7 @@ public class GameController : MonoBehaviour {
 
   public void PlayDialogue(AudioClip a) {
     AudioSource source = this.GetComponents<AudioSource>()[0];
-    if (!source.isPlaying) {
+    if (!source.isPlaying && !isOver && !player.UnderLake) {
       source.clip = a;
       source.Play();
     }

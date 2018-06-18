@@ -44,7 +44,7 @@ public class FirstPersonController : MonoBehaviour {
   private AudioSource m_AudioSource;
 
   public AudioClip[] FootstepsSounds {
-    set { this.m_FootstepSounds = value; }
+    set { this.m_FootstepSounds = value; this.m_JumpSound = value[0]; this.m_LandSound = value[1]; }
   }
 
   // Use this for initialization
